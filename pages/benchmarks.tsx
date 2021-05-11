@@ -388,7 +388,7 @@ function Benchmarks(): React.ReactElement {
               <div className="mt-8">
                 <a href="#http-proxy-throughput" id="http-proxy-throughput">
                   <h5 className="text-lg font-medium tracking-tight hover:underline">
-                    HTTP Proxy Throughput
+                    HTTP Proksi chiqimi
                   </h5>
                 </a>
                 <BenchmarkOrLoading
@@ -400,8 +400,8 @@ function Benchmarks(): React.ReactElement {
                   yTickFormat={showNormalized ? formatPercentage : formatReqSec}
                 />
                 <p className="mt-1">
-                  Tests proxy performance. 10 keep-alive connections do as many
-                  hello-world requests as possible. Bigger is better.
+                  Proksi tezligini sinovi. 10 keep-alive connections do as many
+                  hello-world requests as possible. Katta bu yaxshi.
                 </p>
                 <ul className="ml-8 list-disc my-2">
                   <li>
