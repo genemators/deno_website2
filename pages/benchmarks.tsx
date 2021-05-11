@@ -91,7 +91,7 @@ function Benchmarks(): React.ReactElement {
     <>
       <Head>
         <title>
-          Benchmarks {dataRangeTitle ? `(${dataRangeTitle})` : `| Deno`}
+          Test natijalari {dataRangeTitle ? `(${dataRangeTitle})` : `| Deno`}
         </title>
       </Head>
       <CookieBanner />
@@ -100,7 +100,7 @@ function Benchmarks(): React.ReactElement {
         <div className="mb-12">
           <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 mt-8 pb-8">
             <img src="/images/deno_logo_4.gif" className="mb-12 w-32 h-32" />
-            <h4 className="text-2xl font-bold tracking-tight">About</h4>
+            <h4 className="text-2xl font-bold tracking-tight">Ma'lumot</h4>
             <p className="mt-4">
               As part of Deno's continuous integration and testing pipeline we
               measure the performance of certain key metrics of the runtime. You

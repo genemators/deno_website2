@@ -26,7 +26,7 @@ for await (const req of s) {
   return (
     <>
       <Head>
-        <title>Deno - A secure runtime for JavaScript and TypeScript</title>
+        <title>Deno - JavaScript va TypeScript uchun xavfsiz yordamchi dastur</title>
       </Head>
       <CookieBanner />
       {/* <div className="bg-blue-500 p-4 text-white flex justify-center text-center">
@@ -47,9 +47,8 @@ for await (const req of s) {
               Deno
             </h1>
             <h2 className="mt-4 sm:mt-5 font-light text-2xl text-center leading-tight text-gray-900">
-              A <strong className="font-semibold">secure</strong> runtime for{" "}
-              <strong className="font-semibold">JavaScript</strong> and{" "}
-              <strong className="font-semibold">TypeScript</strong>.
+              <strong className="font-semibold">JavaScript</strong> va{" "}
+              <strong className="font-semibold">TypeScript</strong> uchun <strong className="font-semibold">xavfsiz</strong> yordamchi dastur.
             </h2>
             <a
               href="https://github.com/denoland/deno/releases/latest"
