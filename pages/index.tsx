@@ -107,7 +107,9 @@ for await (const req of s) {
               </h3>
             </a>
           </Link>
-          <p className="my-4 text-gray-700">Oddiy dastur ishga tushirib ko'ring:</p>
+          <p className="my-4 text-gray-700">
+            Oddiy dastur ishga tushirib ko'ring:
+          </p>
           <CodeBlock
             code="deno run https://deno.land/std/examples/welcome.ts"
             language="bash"
@@ -127,7 +129,7 @@ for await (const req of s) {
             <Link href="/manual">
               <a className="link">qo'llanma</a>{" "}
             </Link>
-             dan topishingiz mumkin.
+            dan topishingiz mumkin.
           </p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
