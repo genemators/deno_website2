@@ -6,6 +6,12 @@
     "repository": "https://github.com/denoland/deno_website2"
   },
   {
+    "language": "O'zbek",
+    "english": "O'zbek",
+    "link": "https://deno.uz/",
+    "repository": "https://github.com/genemators/deno_website2"
+  },
+  {
     "language": "日本語",
     "english": "Japanese",
     "link": "https://deno-ja.vercel.app/",
