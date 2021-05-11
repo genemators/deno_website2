@@ -94,7 +94,7 @@ function BenchmarkChart(props: BenchmarkChartProps): React.ReactElement {
 export function BenchmarkLoading(): React.ReactElement {
   return (
     <div style={{ height: 335 }} className="flex items-center justify-center">
-      <span className="text-gray-500">Loading...</span>
+      <span className="text-gray-500">Yuklanmoqda...</span>
     </div>
   );
 }
