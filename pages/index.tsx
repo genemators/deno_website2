@@ -26,9 +26,7 @@ for await (const req of s) {
   return (
     <>
       <Head>
-        <title>
-          Deno - JavaScript va TypeScript uchun xavfsiz yordamchi dastur
-        </title>
+        <title>Deno - JavaScript va TypeScript uchun xavfsiz yordamchi dastur</title>
       </Head>
       <CookieBanner />
       {/* <div className="bg-blue-500 p-4 text-white flex justify-center text-center">
@@ -50,9 +48,7 @@ for await (const req of s) {
             </h1>
             <h2 className="mt-4 sm:mt-5 font-light text-2xl text-center leading-tight text-gray-900">
               <strong className="font-semibold">JavaScript</strong> va{" "}
-              <strong className="font-semibold">TypeScript</strong> uchun{" "}
-              <strong className="font-semibold">xavfsiz</strong> yordamchi
-              dastur.
+              <strong className="font-semibold">TypeScript</strong> uchun <strong className="font-semibold">xavfsiz</strong> yordamchi dastur.
             </h2>
             <a
               href="https://github.com/denoland/deno/releases/latest"
@@ -93,7 +89,7 @@ for await (const req of s) {
           <Link href="#installation">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="installation">
-                O'rnatish
+                Installation
               </h3>
             </a>
           </Link>
@@ -103,18 +99,22 @@ for await (const req of s) {
           <Link href="#getting-started">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="getting-started">
-                Ishni boshlash
+                Getting Started
               </h3>
             </a>
           </Link>
+<<<<<<< HEAD
           <p className="my-4 text-gray-700">
             Oddiy dastur ishga tushirib ko'ring:
           </p>
+=======
+          <p className="my-4 text-gray-700">Try running a simple program:</p>
+>>>>>>> parent of a33a997 (Update index.tsx)
           <CodeBlock
             code="deno run https://deno.land/std/examples/welcome.ts"
             language="bash"
           />
-          <p className="my-4 text-gray-700">Hamda sal qiyinrog'ini ham:</p>
+          <p className="my-4 text-gray-700">Or a more complex one:</p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8">
           <CodeBlock
@@ -136,7 +136,11 @@ for await (const req of s) {
           <Link href="#runtime-documentation">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="runtime-documentation">
+<<<<<<< HEAD
                 Yordamchi dastur dokumentatsiyasi
+=======
+                Runtime Documentation
+>>>>>>> parent of a33a997 (Update index.tsx)
               </h3>
             </a>
           </Link>
