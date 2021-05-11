@@ -107,18 +107,20 @@ function Benchmarks(): React.ReactElement {
               can view these benchmarks here.
             </p>
             <p className="mt-4">
+              Hozirda siz
               You are currently viewing data for{" "}
-              {showAll ? "all" : "the most recent"} commits to the{" "}
-              <a href="https://github.com/denoland/deno">main</a>
-              branch. You can also view{" "}
+               commits to the{" "}
+              <a href="https://github.com/denoland/deno">main (asosiy)</a> ga
+              yuklangan {showAll ? "hamma" : "eng oxirgi"} ma'lumotlarni
+              ko'rayabsiz. Hamda, siz{" "}
               <Link href={!showAll ? "/benchmarks?all" : "/benchmarks"}>
-                <a className="link">{!showAll ? "all" : "the most recent"}</a>
+                <a className="link">{!showAll ? "hamma" : "eng oxirgi"}</a>
               </Link>{" "}
-              commits.
+              ma'lumotlarni ham ko'zdan kechirishingiz mumkin.
             </p>
             <div className="mt-12 pt-4">
               <h4 className="text-2xl font-bold tracking-tight">
-                Runtime Metrics
+                Dastur Metrikasi
               </h4>
               <p className="mt-2">
                 In this section we measure various metrics of the following
@@ -407,8 +409,8 @@ function Benchmarks(): React.ReactElement {
                       path="cli/bench/deno_tcp_proxy.ts"
                       name="deno_proxy_tcp"
                     />{" "}
-                    is a fake tcp proxy server that doesn't parse HTTP. It is
-                    comparable to{" "}
+                    bu HTTP o'qimaydigan soxta tcp server. Bu
+                    shunga qiyoslanadi{" "}
                     <SourceLink
                       path="cli/bench/node_tcp_proxy.js"
                       name="node_proxy_tcp"
@@ -419,8 +421,8 @@ function Benchmarks(): React.ReactElement {
                       path="cli/bench/deno_http_proxy.ts"
                       name="deno_proxy"
                     />{" "}
-                    is an HTTP proxy server written in TypeScript. It is
-                    comparable to{" "}
+                    bu TypeScript da yozilgan HTTP proksi server. Bu
+                    shunga qiyoslanadi{" "}
                     <SourceLink
                       path="cli/bench/node_http_proxy.js"
                       name="node_proxy"
@@ -431,67 +433,66 @@ function Benchmarks(): React.ReactElement {
                       path="test_util/src/test_server.rs"
                       name="hyper"
                     />{" "}
-                    is a Rust HTTP server used as the origin for the proxy
-                    tests.
+                    bu Rustda qurilgan sinoviy HTTP server.
                   </li>
                 </ul>
               </div>
               <div className="mt-8">
                 <a href="#throughput" id="throughput">
                   <h5 className="text-lg font-medium tracking-tight hover:underline">
-                    Throughput
+                    Chiqim
                   </h5>
                 </a>
                 <BenchmarkOrLoading
                   data={data}
                   columns={data?.throughput}
-                  yLabel={"seconds"}
+                  yLabel={"sekundlar"}
                   yTickFormat={formatLogScale}
                 />
                 <p className="mt-1">
-                  Log scale. Time it takes to pipe a certain amount of data
-                  through Deno.{" "}
+                  Axborotnomalar hajmi. Deno da anniq bir ma'lumotlar aylanishiga ketadigan
+                  vaqt.{" "}
                   <SourceLink
                     path="cli/tests/echo_server.ts"
                     name="echo_server.ts"
                   />{" "}
-                  and <SourceLink path="cli/tests/cat.ts" name="cat.ts" />.
-                  Smaller is better.
+                  va <SourceLink path="cli/tests/cat.ts" name="cat.ts" />.
+                  Kam | Kichkina bu yaxshi.
                 </p>
               </div>
             </div>
             <div className="mt-20">
-              <h4 className="text-2xl font-bold tracking-tight">Size</h4>
+              <h4 className="text-2xl font-bold tracking-tight">Hajm</h4>
               <div className="mt-8">
                 <a href="#executable-size" id="executable-size">
                   <h5 className="text-lg font-medium tracking-tight hover:underline">
-                    File sizes
+                    Fayl hajmlari
                   </h5>
                 </a>
                 <BenchmarkOrLoading
                   data={data}
                   columns={data?.binarySize}
-                  yLabel={"megabytes"}
+                  yLabel={"megabaytlar"}
                   yTickFormat={formatMB}
                 />
                 <p className="mt-1">
-                  We track the size of various files here. "deno" is the release
-                  binary.
+                  Bu yerda biz har xil fayllarning hajmi ko'zdan kechiramiz. "deno"
+                  bu reliz ishga tushuruvchisidir.
                 </p>
               </div>
               <div className="mt-8">
                 <a href="#bundle-size" id="bundle-size">
                   <h5 className="text-lg font-medium tracking-tight hover:underline">
-                    Bundle size
+                    Jamlanma hajmi
                   </h5>
                 </a>{" "}
                 <BenchmarkOrLoading
                   data={data}
                   columns={data?.bundleSize}
-                  yLabel={"kilobytes"}
+                  yLabel={"kilobaytlar"}
                   yTickFormat={formatKB}
                 />
-                <p className="mt-1">Size of different bundled scripts.</p>
+                <p className="mt-1">Har xil jamlangan skript hajmlari.</p>
                 <ul className="ml-8 list-disc my-2">
                   <li>
                     <Link href="/std/http/file_server.ts">
@@ -508,7 +509,7 @@ function Benchmarks(): React.ReactElement {
               <div className="mt-8">
                 <a href="#cargo-deps" id="cargo-deps">
                   <h5 className="text-lg font-medium tracking-tight hover:underline">
-                    Cargo Dependencies
+                    Cargo Bog'lanmalari
                   </h5>
                 </a>{" "}
                 <BenchmarkOrLoading data={data} columns={data?.cargoDeps} />
@@ -516,7 +517,7 @@ function Benchmarks(): React.ReactElement {
             </div>
             <div className="mt-20">
               <h4 className="text-2xl font-bold tracking-tight">
-                Language Server
+                Til Serveri
               </h4>
               <div className="mt-8">
                 <BenchmarkOrLoading
