@@ -70,11 +70,11 @@ function ThirdPartyRegistryList(): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Third Party Modules | Deno</title>
+        <title>Uchinchi Darajali Modullar | Deno</title>
       </Head>
       <CookieBanner />
       <div className="bg-gray">
-        <Header subtitle="Third Party Modules" widerContent={true} />
+        <Header subtitle="Uchinchi Darajali Modullar" widerContent={true} />
         <RegistryInstructions
           isOpen={overlayOpen}
           close={() => setOverlayOpen(false)}
@@ -82,20 +82,20 @@ function ThirdPartyRegistryList(): React.ReactElement {
         <div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
             <dt className="text-lg leading-6 font-medium text-gray-900">
-              What is deno.land/x?
+              deno.land/x bu nima?
             </dt>
             <dd className="mt-2">
               <p className="text-base leading-6 text-gray-500">
-                <span className="font-semibold">deno.land/x</span> is a hosting
-                service for Deno scripts. It caches releases of open source
-                modules stored on GitHub and serves them at one easy to remember
-                domain.
+                <span className="font-semibold">deno.land/x</span> bu Deno
+                skriptlarini taqdim etadigan portal. Ochiq manbaga asosida
+                GitHubga qo'yilgan modullarni jamlab turib ommaga qulay tarzda
+                esdan qoladigan domen orqali taqdim etadi.
               </p>
             </dd>
 
             <div className="mt-2">
               <a href="#info" className="link">
-                Learn more
+                Ko'proq ma'lumot olish
               </a>
             </div>
             {/* <div className="mt-8">
@@ -107,14 +107,14 @@ function ThirdPartyRegistryList(): React.ReactElement {
           </div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
             <label htmlFor="query" className="font-medium sr-only">
-              Search
+              Qidirish
             </label>
             <input
               id="query"
               className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300 mt-1"
               type="text"
               placeholder={
-                !resp ? "Search" : `Search through ${resp.totalCount} modules`
+                !resp ? "Qidirish" : `${resp.totalCount} ta modullar orasidan qidirish`
               }
               value={query}
               onChange={handleSearchInput}
@@ -149,7 +149,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
-                              <title>star</title>
+                              <title>yulduzchalar</title>
                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                             </svg>
                           </div>
@@ -173,14 +173,14 @@ function ThirdPartyRegistryList(): React.ReactElement {
                 <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
                   <div className="flex-1 flex justify-between items-center sm:hidden">
                     <button className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-gray-100 text-sm leading-5 font-medium rounded-md bg-white">
-                      Previous
+                      Orqaga
                     </button>
                     <div className="text-base leading-6 text-gray-500">
                       <div className="h-3 w-4 bg-gray-100 inline-block mr-1" />/
                       <div className="h-3 w-4 bg-gray-100 inline-block ml-1" />
                     </div>
                     <button className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-gray-100 text-sm leading-5 font-medium rounded-md bg-white ml-4">
-                      Next
+                      Keyingi
                     </button>
                   </div>
                   <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
@@ -241,13 +241,13 @@ function ThirdPartyRegistryList(): React.ReactElement {
               </div>
             ) : resp === null ? (
               <div className="p-4 text-center sm:text-left text-sm leading-5 font-medium text-gray-500 truncate">
-                Failed to load modules
+                Modullarni yuklab bo'lmadi
               </div>
             ) : (
               <div className="bg-white sm:shadow border border-gray-200 overflow-hidden sm:rounded-md mt-4">
                 {resp.results.length == 0 ? (
                   <div className="p-4 text-center sm:text-left text-sm leading-5 font-medium text-gray-500 truncate">
-                    No modules found
+                    Modullar topilmadi
                   </div>
                 ) : (
                   <ModuleList
@@ -286,7 +286,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                                   : "text-gray-500 cursor-default"
                               } transition ease-in-out duration-150`}
                             >
-                              Previous
+                              Orqaga
                             </button>
                             <div className="text-base leading-6 text-gray-500">
                               {page}/{pageCount}
@@ -300,25 +300,24 @@ function ThirdPartyRegistryList(): React.ReactElement {
                                   : "text-gray-500 cursor-default"
                               } transition ease-in-out duration-150`}
                             >
-                              Next
+                              Keyingi
                             </button>
                           </div>
                           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                             <div>
                               <p className="text-sm leading-5 text-gray-700">
-                                Showing{" "}
-                                <span className="font-medium">
-                                  {(page - 1) * PER_PAGE + 1}
-                                </span>{" "}
-                                to{" "}
-                                <span className="font-medium">
-                                  {(page - 1) * PER_PAGE + resp.results.length}
-                                </span>{" "}
-                                of{" "}
                                 <span className="font-medium">
                                   {resp.totalCount}
                                 </span>{" "}
-                                results
+                                ta natijalar ichidan
+                                <span className="font-medium">
+                                  {(page - 1) * PER_PAGE + 1}
+                                </span>{" "}
+                                dan{" "}
+                                <span className="font-medium">
+                                  {(page - 1) * PER_PAGE + resp.results.length}
+                                </span>{" "}
+                                gacha bo'lgan natijalar ko'rsatilmoqda{" "}
                               </p>
                             </div>
                             <div>
@@ -331,7 +330,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                                       ? "text-gray-500 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500"
                                       : "text-gray-300 cursor-default"
                                   } transition ease-in-out duration-150`}
-                                  aria-label="Previous"
+                                  aria-label="Orqaga"
                                 >
                                   <svg
                                     className="h-5 w-5"
@@ -477,7 +476,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
               <div>
                 <div>
                   <dt className="text-lg leading-6 font-medium text-gray-900">
-                    How do I use modules on deno.land/x?
+                    deno.land/x dagi modullarni qanday ishlataman?
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500 break-words">
