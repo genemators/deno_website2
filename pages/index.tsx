@@ -60,25 +60,24 @@ for await (const req of s) {
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
           <p className="my-4 text-gray-700">
-            Deno bu Javascript va Typescript dasturlash tillar uchun yaratilgan,
-            sodda, zamonaviy va xavfsiz yordamchi dastur. Deno Rust dasturlash
-            tilida yaratilgan va V8 tuzilishini ishlatadi.
+            Deno is a simple, modern and secure runtime for JavaScript and
+            TypeScript that uses V8 and is built in Rust.
           </p>
           <ol className="ml-8 list-disc text-gray-700">
             <li>
-              Doimiy xavfsiz. Toki ruxsat etilmaguncha hech qanday tarmoq yoki
-              kalit so'zlar manbalariga ruxsat berilmaydi.
+              Secure by default. No file, network, or environment access, unless
+              explicitly enabled.
             </li>
-            <li>Typescript dasturlash tilini o'z ichiga qamrab olgan.</li>
-            <li>Yagona ishga tushuriladigan fayl sifatida ishlaydi.</li>
+            <li>Supports TypeScript out of the box.</li>
+            <li>Ships only a single executable file.</li>
             <li>
-              Ichidan taqdim etiladigan yordamchi instrumentlar mavjud. Misol, (
-              <InlineCode>deno info</InlineCode>) va kodni tartibga soluvchi (
+              Has built-in utilities like a dependency inspector (
+              <InlineCode>deno info</InlineCode>) and a code formatter (
               <InlineCode>deno fmt</InlineCode>).
             </li>
             <li>
-              Deno bilan ishlashi anniq bo'lgan va tasdiqlangan standart
-              kutubxonasiga ega:{" "}
+              Has a set of reviewed (audited) standard modules that are
+              guaranteed to work with Deno:{" "}
               <a href="https://deno.land/std" className="link">
                 deno.land/std
               </a>
@@ -103,13 +102,7 @@ for await (const req of s) {
               </h3>
             </a>
           </Link>
-<<<<<<< HEAD
-          <p className="my-4 text-gray-700">
-            Oddiy dastur ishga tushirib ko'ring:
-          </p>
-=======
           <p className="my-4 text-gray-700">Try running a simple program:</p>
->>>>>>> parent of a33a997 (Update index.tsx)
           <CodeBlock
             code="deno run https://deno.land/std/examples/welcome.ts"
             language="bash"
@@ -125,22 +118,19 @@ for await (const req of s) {
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8">
           <p className="my-4 text-gray-700">
-            Yanada chuqur, to'liq va misollarga ega ma'lumotlarni{" "}
+            You can find a more in depth introduction, examples, and environment
+            setup guides in{" "}
             <Link href="/manual">
-              <a className="link">qo'llanma</a>{" "}
+              <a className="link">the manual</a>
             </Link>
-            dan topishingiz mumkin.
+            .
           </p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
           <Link href="#runtime-documentation">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="runtime-documentation">
-<<<<<<< HEAD
-                Yordamchi dastur dokumentatsiyasi
-=======
                 Runtime Documentation
->>>>>>> parent of a33a997 (Update index.tsx)
               </h3>
             </a>
           </Link>
@@ -303,7 +293,7 @@ const InstallSection = () => {
   const cargo = (
     <div key="cargo" className="my-4 text-gray-700">
       <p className="py-2">
-        Manba orqali qurib o'rnatib oling{" "}
+        Build and install from source using{" "}
         <a href="https://crates.io/crates/deno" className="link">
           Cargo
         </a>
