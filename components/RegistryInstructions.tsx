@@ -89,7 +89,7 @@ function RegistryInstructions(props: {
                 >
                   <div className="absolute top-0 left-0 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4">
                     <button
-                      aria-label="Close panel"
+                      aria-label="Panelni yopish"
                       className="text-gray-300 hover:text-white transition ease-in-out duration-150"
                       onClick={props.close}
                     >
@@ -113,30 +113,32 @@ function RegistryInstructions(props: {
                   <div className="my-auto py-10">
                     <header>
                       <h2 className="text-xl leading-7 font-medium text-gray-900">
-                        {stage === 0 && "Adding a module"}
-                        {stage === 1 && "Select a module name"}
-                        {stage === 2 && "Advanced options"}
-                        {stage === 3 && "Add the webhook"}
+                        {stage === 0 && "Modul qo'shish"}
+                        {stage === 1 && "Modul uchun nom tanlash"}
+                        {stage === 2 && "Qo'shimcha tanlovlar"}
+                        {stage === 3 && "Webhook taqdim etish"}
                       </h2>
                     </header>
                     <div className="space-y-4">
                       {stage === 0 && (
                         <>
                           <p className="text-base">
-                            All modules on{" "}
-                            <b className="font-semibold">deno.land/x</b> need to
-                            be hosted as public repositories on GitHub.com.
+                            Hamma{" "}
+                            <b className="font-semibold">deno.land/x</b> dagi modullar
+                            GitHub.com da ochiq manba asosida taqdim etilishi shart.
                           </p>
                           <p className="text-base">
+                            Har safar repozitoriyadan versiya taqdim etilganda,{" "}
                             <b className="font-semibold">deno.land/x</b>{" "}
-                            downloads and stores your repository contents every
-                            time you create a git tag. We only do this once for
-                            every tag. This ensures that the contents we serve
-                            for a specific version can never change.
+                            hammasini yuklab, hammaga taqdim etadi. Biz buni
+                            har bir versiya uchun bir marotaba amalga oshiramiz.
+                            Bu esa har bir versiyada ma'lumotlar adashib ketmasligini
+                            ta'minlaydi.
                           </p>
                           <p className="text-base">
-                            Our service needs to get informed whenever a new tag
-                            is created. For this purpose we use GitHub webhooks.
+                            Bizning servis har safar versiya taqdim etilganda
+                            habardor bo'lib turishi zarurdir. Shuning uchun ham
+                            biz GitHub webhooks ishlatamiz.
                           </p>
                           <span className="block w-full rounded-md shadow-sm mt-4">
                             <button
@@ -144,20 +146,20 @@ function RegistryInstructions(props: {
                               className="w-full flex justify-center py-2 px-4 mt-12 border border-gray-300 text-md font-medium rounded-md text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out"
                               onClick={() => setStage(1)}
                             >
-                              Next
+                              Keyingi
                             </button>
                           </span>
                         </>
                       )}
                       {stage === 1 && (
                         <>
-                          <p>To get started please select a module name:</p>
+                          <p>Boshlash uchun modulga nom bering:</p>
                           <div>
                             <label
                               htmlFor="modulename"
                               className="font-semibold sr-only"
                             >
-                              Module Name
+                              Module nomi
                             </label>
                             <input
                               id="modulename"
@@ -177,20 +179,21 @@ function RegistryInstructions(props: {
                             />
                             {isModuleNameAvailable === true ? (
                               <p className="text-green-500 mb-2">
-                                This module name is available.
+                                Bu modul oldindan mavjud.
                               </p>
                             ) : isModuleNameAvailable === false ? (
                               <p className="text-red-400 mb-2">
-                                This module name is not available for a new
-                                author. If this module is already registered to
-                                your name, press Next.
+                                Bu modul nomi yangi muharrir uchun mavjud emas.
+                                Agar ushbu modul sizning nomingizga kiritilgan
+                                bo'lsa, keyingi tugmasini bosing.
                               </p>
                             ) : null}
                             {!isModuleNameValid ? (
                               <span className="text-red-400">
-                                The module name must be between 3 and 40
-                                characters and contain only the characters a-z,
-                                0-9 and _.
+                                Modul nomi harflar soni 3 dan 40 tagacha
+                                bo'lishi lozim va ushbu nom oddiy alfabet
+                                harflari, 0 dan 9 gacha bo'lgan sonlar va "_"
+                                belgisidan tashkil topishi mumkin.
                               </span>
                             ) : null}
                           </div>
@@ -205,25 +208,25 @@ function RegistryInstructions(props: {
                               } focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out`}
                               onClick={() => setStage(2)}
                             >
-                              Next
+                              Keyingi
                             </button>
                           </span>
                           <button className="link" onClick={() => setStage(0)}>
-                            Previous
+                            Orqaga
                           </button>
                         </>
                       )}
                       {stage === 2 && (
                         <>
                           <p>
-                            There are some more optional settings to set up:
+                            Ushbu sahifada sozlanishi kerak bo'lgan optsional sozlamalar mavjud:
                           </p>
                           <div className="mt-2">
                             <label
                               htmlFor="subdirectory"
                               className="font-medium"
                             >
-                              Subdirectory
+                              Sabdirektoriya
                             </label>
                             <input
                               id="subdirectory"
@@ -235,21 +238,21 @@ function RegistryInstructions(props: {
                                   : ""
                               }`}
                               type="text"
-                              placeholder="Subdirectory"
+                              placeholder="Sabdirektoriya"
                               value={subdirectory}
                               onChange={(e) => setSubdirectory(e.target.value)}
                             />
                             {!isSubdirectoryValid ? (
                               <p className="text-red-400 mb-2">
-                                The provided subdirectory is not valid. It must
-                                end with a <InlineCode>/</InlineCode>, but may
-                                not start with one. (e.g.{" "}
+                                Kiritilgan sabdirektoriya mavjud emas. Ushbu
+                                qiymat <InlineCode>/</InlineCode> bilan tugashi
+                                shart, hamda shu bilan boshlanmaydi. (misol:{" "}
                                 <InlineCode>src/</InlineCode>)
                               </p>
                             ) : null}
                             <span className="text-gray-500">
-                              Optional. A subdirectory in your repository that
-                              the module to be published is located in.
+                              Optsional. Taqdim etilishi kerak bo'lgan
+                              repozitoriyadagi manzil.
                             </span>
                           </div>
                           <span className="block w-full rounded-md shadow-sm mt-2">
@@ -265,32 +268,32 @@ function RegistryInstructions(props: {
                             text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out`}
                               onClick={() => setStage(3)}
                             >
-                              Next
+                              Keyingi
                             </button>
                           </span>
                           <button className="link" onClick={() => setStage(1)}>
-                            Previous
+                            Orqaga
                           </button>
                         </>
                       )}
                       {stage === 3 && (
                         <>
-                          <p>You can now add the webhook to your repository.</p>
+                          <p>Endi esa repozitoriyangizga webhook qo'shishingiz mumkin.</p>
                           <ol className="list-decimal list-outside ml-4 pl-2 ">
-                            <li>Navigate to the repository you want to add.</li>
+                            <li>Kiritilishi kerak bo'lgan repozitoriyani oching.</li>
                             <li>
-                              Go to the <InlineCode>Settings</InlineCode> tab.
+                              <InlineCode>Settings (Sozlamar)</InlineCode> oynachasini oching.
                             </li>
                             <li>
-                              Click on the <InlineCode>Webhooks</InlineCode>{" "}
-                              tab.
+                              <InlineCode>Webhooks</InlineCode> tugmachasiga bosing{" "}
+                              .
                             </li>
                             <li>
-                              Click on the <InlineCode>Add webhook</InlineCode>{" "}
-                              button.
+                              <InlineCode>Add webhook (Webhook qo'shish)</InlineCode>{" "}
+                              tugmasini bosing.
                             </li>
                             <li>
-                              Enter the URL{" "}
+                              URL (Manzil) kiriting{" "}
                               <InlineCode>
                                 https://api.deno.land/webhook/gh/{moduleName}
                                 {subdirectory
@@ -299,11 +302,11 @@ function RegistryInstructions(props: {
                                     )}`
                                   : ""}
                               </InlineCode>{" "}
-                              in the payload URL field.
+                              payload URL (kutilayotgan manzil) joyiga.
                             </li>
                             <li>
-                              Select <InlineCode>application/json</InlineCode>{" "}
-                              as the content type.
+                              Kontent turi sifatida <InlineCode>application/json</InlineCode>{" "}
+                              kiriting.
                             </li>
                             <li>
                               Select{" "}
