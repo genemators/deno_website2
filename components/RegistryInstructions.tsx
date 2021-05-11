@@ -309,18 +309,18 @@ function RegistryInstructions(props: {
                               kiriting.
                             </li>
                             <li>
-                              Select{" "}
                               <InlineCode>
-                                Let me select individual events.
-                              </InlineCode>
+                                Let me select individual events. (O'zim taqdim etaman)
+                              </InlineCode>{" "}
+                              ni tanlang.
                             </li>
                             <li>
-                              Select only the{" "}
-                              <InlineCode>Branch or tag creation</InlineCode>{" "}
-                              event.
+                              Faqatgina{" "}
+                              <InlineCode>Branch or tag creation (Brend va teg yaratilishi)</InlineCode>{" "}
+                              tugmasini belgilang.
                             </li>
                             <li>
-                              Press <InlineCode>Add webhook</InlineCode>.
+                              <InlineCode>Add webhook (Webhook qo'shish)</InlineCode> tugmasini bosing.
                             </li>
                           </ol>
                           <video
@@ -334,29 +334,28 @@ function RegistryInstructions(props: {
                           <div className="mt-2">
                             {isModuleNameAvailable ? (
                               <div className="text-gray-800 p-2 bg-gray-50 rounded-md border border-gray-200">
-                                Waiting to receive initial WebHook event from
-                                GitHub...
+                                GitHubdan Birinchi sinov signallarini kelishi
+                                kutilmoqda...
                               </div>
                             ) : (
                               <>
                                 <div className="text-green-800 p-2 bg-gray-50 rounded-md border border-green-200">
-                                  Module successfully registered! To upload a
-                                  version, create a new tag / release in the
-                                  repository.
+                                  Modul muvaffaqiyatli kiritldi! Versiya taqdim etish uchun
+                                  repozitoriyada / dan yangi teg yarating.
                                 </div>
                                 <div className="mt-4 rounded-md shadow-sm">
                                   <button
                                     className="w-full flex justify-center py-2 px-4 mt-12 border border-gray-300 text-md font-medium rounded-md text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out"
                                     onClick={props.close}
                                   >
-                                    Done
+                                    Bajarildi
                                   </button>
                                 </div>
                               </>
                             )}
                           </div>
                           <button className="link" onClick={() => setStage(2)}>
-                            Previous
+                            Orqaga
                           </button>
                         </>
                       )}
