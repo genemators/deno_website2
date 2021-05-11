@@ -79,7 +79,7 @@ function DirectoryListing(props: {
           </div>
           {props.repositoryURL && (
             <a href={props.repositoryURL} className="link ml-4">
-              Repozitoriya
+              Repository
             </a>
           )}
         </div>

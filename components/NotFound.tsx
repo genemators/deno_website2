@@ -12,7 +12,7 @@ function NotFoundPage(): React.ReactElement {
             404
           </h1>
           <h2 className="mt-4 sm:mt-5 font-light text-2xl text-center leading-tight text-gray-900">
-            Siz qidirayotgan ma'lumot topilmadi.
+            Couldn't find what you're looking for.
           </h2>
         </header>
       </div>

@@ -47,7 +47,7 @@ function Header({
               fill="none"
               viewBox="0 0 24 24"
             >
-              <title>Menyu | Deno</title>
+              <title>Menu | Deno</title>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -60,12 +60,12 @@ function Header({
         <div className="hidden lg:flex md:ml-10 items-end">
           <Link href="/#installation">
             <a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              O'rnatish
+              Install
             </a>
           </Link>
           <Link href="/manual">
             <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Qo'llanma
+              Manual
             </a>
           </Link>
           <a
@@ -82,12 +82,12 @@ function Header({
           </a>
           <Link href="/std">
             <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Standart Kutubxona
+              Standard Library
             </a>
           </Link>
           <Link href="/x">
             <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Uchinchi Darajali Modullar
+              Third Party Modules
             </a>
           </Link>
           <a
@@ -169,12 +169,12 @@ function Header({
               <div className="px-2 pt-4 pb-3">
                 <Link href="/#installation">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    O'rnatish
+                    Install
                   </a>
                 </Link>
                 <Link href="/manual">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Qo'llanma
+                    Manual
                   </a>
                 </Link>
                 <Link href="https://deno.com/blog">
@@ -190,12 +190,12 @@ function Header({
                 </a>
                 <Link href="/std">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Standart Kutubxona
+                    Standard Library
                   </a>
                 </Link>
                 <Link href="/x">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Uchinchi Darajali Modullar
+                    Third Party Modules
                   </a>
                 </Link>
               </div>

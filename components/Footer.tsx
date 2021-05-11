@@ -30,21 +30,21 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
           <div className="px-5 py-2">
             <Link href="/[...rest]" as="/std">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Standart Kutubxona
+                Standard Library
               </a>
             </Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/x">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Uchinchi Darajali Modullar
+                Third Party Modules
               </a>
             </Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/benchmarks">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Test Natijalari
+                Benchmarks
               </a>
             </Link>
           </div>
@@ -66,7 +66,7 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
           <div className="px-5 py-2">
             <Link href="/translations">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Tarjimalar
+                Translations
               </a>
             </Link>
           </div>
@@ -75,7 +75,7 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
               href="https://status.deno.land/"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              Sistema Holati
+              System Status
             </a>
           </div>
         </nav>

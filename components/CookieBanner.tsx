@@ -19,11 +19,11 @@ export function CookieBanner(): React.ReactElement {
               <div className="w-0 flex-1 flex items-center">
                 <p className="ml-3 font-medium text-white">
                   <span className="md:hidden">
-                    Biz funksional kukilar ishlatamiz.
+                    We make use of functional cookies.
                   </span>
                   <span className="hidden md:inline">
-                    Foydalanuvchi qulayligini oshirish maqsadida web sahifa
-                    funksional kukilar ishlatadi.
+                    To ensure a good user experience, we make use of functional
+                    cookies.
                   </span>
                 </p>
               </div>
@@ -35,7 +35,7 @@ export function CookieBanner(): React.ReactElement {
                   }}
                   className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-600 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
                 >
-                  Chunarli
+                  Ok
                 </button>
               </div>
             </div>
