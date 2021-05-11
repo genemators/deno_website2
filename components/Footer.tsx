@@ -15,7 +15,7 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
           <div className="px-5 py-2">
             <Link href="/[...rest]" as="/manual">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Manual
+                Qo'llanma
               </a>
             </Link>
           </div>
@@ -24,34 +24,34 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
               href="https://doc.deno.land/builtin/stable"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              Runtime API
+              Dastur API lari
             </a>
           </div>
           <div className="px-5 py-2">
             <Link href="/[...rest]" as="/std">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Standard Library
+                Standart Kutubxona
               </a>
             </Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/x">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Third Party Modules
+                Uchinchi Darajali Modullar
               </a>
             </Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/benchmarks">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Benchmarks
+                Test Natijalari
               </a>
             </Link>
           </div>
           <div className="px-5 py-2">
             <Link href="/artwork">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Artwork
+                Rasmlar
               </a>
             </Link>
           </div>
@@ -66,7 +66,7 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
           <div className="px-5 py-2">
             <Link href="/translations">
               <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                Translations
+                Tarjimalar
               </a>
             </Link>
           </div>
@@ -75,7 +75,7 @@ function Footer(props: { simple?: boolean }): React.ReactElement {
               href="https://status.deno.land/"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              System Status
+              Tizim Holati
             </a>
           </div>
         </nav>
