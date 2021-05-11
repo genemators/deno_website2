@@ -18,14 +18,14 @@ function ArtworkPage(): React.ReactElement {
       <Header />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-8 mb-24">
         <div className="max-w-screen-lg mx-auto">
-          <h4 className="text-4xl font-bold tracking-tight">Artwork</h4>
+          <h4 className="text-4xl font-bold tracking-tight">Rasmlar</h4>
           <p className="mt-4 text-lg">
-            Do you have a piece to display here?{" "}
+            Ko'rgazmaga qo'ygani rasmlar bormi?{" "}
             <a
               href="https://github.com/denoland/deno_website2/blob/main/artwork.json"
               className="link"
             >
-              Add it!
+              Shu yerga qo'shing!
             </a>
           </p>
         </div>
